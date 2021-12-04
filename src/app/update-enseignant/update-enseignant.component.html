@@ -1,0 +1,34 @@
+<div class="container">
+    <div>
+    <h2>Modifier un enseignant :</h2>
+    </div>
+    <form >
+    <div hidden class="col-sm-4 col-md-4 col-lg-4">
+    <label >ID enseignant</label>
+    <input type="text" [(ngModel)]="currentEnseignant.idEnseignant"
+    name="idEnseignant" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >Nom de l'enseignant</label>
+    <input type="text"[(ngModel)]= "currentEnseignant.nomEnseignant"
+    name="nomEnseignant" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+    <label >salaire de l'enseignant</label>
+    <input type="number" [(ngModel)]= "currentEnseignant.salaireEnseignant"
+    name="salaireEnseignant" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+    <label >Date d'embauche</label>
+    <input type="date" [ngModel]="currentEnseignant.dateEmbauche | date: 'yyyy-MM-dd'"
+    (ngModelChange)="currentEnseignant.dateEmbauche= $event" name="dateCreation" class="form-control">
+
+</div>
+<div class="mt-2">
+
+<button type="submit" (click)="updateEnseignant()" class="btn btn-success">Modifer</button>
+
+</div>
+</form>
+
+</div>
